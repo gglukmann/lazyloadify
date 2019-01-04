@@ -1,24 +1,25 @@
 {
   "name": "lazyloadify",
   "version": "1.0.1",
-  "description": "",
+  "description": "Lazyload images with Intersection Observers",
   "contributors": [
     "Gert Glükmann <gglukmann@gmail.com>",
     "Ott-Kaarel Martens <ottmartens@gmail.com>"
   ],
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "files": [
+    "index.js",
+    "index.min.js"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gglukmann/lazyloadify.git"
   },
   "keywords": [
     "lazyload",
-    "intersection-observer"
+    "intersection-observer",
+    "lazyload-images"
   ],
-  "author": "",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/gglukmann/lazyloadify/issues"
