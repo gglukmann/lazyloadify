@@ -1,4 +1,4 @@
-class Lazyload {
+class Lazyloadify {
     /**
      * @constructor
      */
@@ -139,5 +139,4 @@ class Lazyload {
     }
 }
 
-const lazyload = new Lazyload();
-export default lazyload;
+export default new Lazyloadify();
