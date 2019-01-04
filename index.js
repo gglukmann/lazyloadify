@@ -5,7 +5,7 @@ class Lazyloadify {
     constructor(options={}) {
         this.imageCount = 0;
         this.observer = false;
-        this.selectorClass = options.selectorClass || '.js-lazyload';
+        this.selectorClass = options.selectorClass || 'js-lazyload';
         this.loadedClass = options.loadedClass || 'js-lazyloaded';
         this.rootElement = options.rootElement || null;
         this.rootMargin = options.rootMargin || '0px';
@@ -20,14 +20,13 @@ class Lazyloadify {
      * @return {void}
      */
     load() {
-        // Get all of the images that are marked up to lazy load
-        const images = document.querySelectorAll(this.selectorClass);
         const config = {
-            // If the image gets within 50px in the Y axis, start the download.
             root: this.rootElement,
             rootMargin: this.rootMargin,
-            threshold: this.treshold
+            threshold: this.treshold,
         };
+        // Get all of the images that are marked up to lazy load
+        const images = document.querySelectorAll(`.${this.selectorClass}`);
         this.imageCount = images.length;
 
         // If we don't have support for intersection observer, loads the images immediately
