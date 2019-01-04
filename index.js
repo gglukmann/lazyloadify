@@ -55,7 +55,7 @@ class Lazyloadify {
             }, config);
 
             for (const image of images) {
-                if (image.classList.contains(loadedClass)) {
+                if (image.classList.contains(this.loadedClass)) {
                     continue;
                 }
 
