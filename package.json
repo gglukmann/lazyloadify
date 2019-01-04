@@ -1,0 +1,23 @@
+{
+  "name": "lazyloadify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gglukmann/lazyloadify.git"
+  },
+  "keywords": [
+    "lazyload",
+    "intersection-observer"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gglukmann/lazyloadify/issues"
+  },
+  "homepage": "https://github.com/gglukmann/lazyloadify#readme"
+}
