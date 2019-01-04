@@ -15,5 +15,4 @@ imageLoader.load();
 
 ## Options
 
-Plain Intersection Observer options. See [Intersection Observer API on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)
-
+Plain Intersection Observer options. See [Intersection Observer API on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API).
