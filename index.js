@@ -2,24 +2,31 @@ class Lazyloadify {
     /**
      * @constructor
      */
-    constructor() {
+    constructor(options={}) {
         this.imageCount = 0;
         this.observer = false;
+        this.selectorClass = options.selectorClass || '.js-lazyload';
+        this.loadedClass = options.loadedClass || 'js-lazyloaded';
+        this.rootElement = options.rootElement || null;
+        this.rootMargin = options.rootMargin || '0px';
+        this.treshold = options.treshold || 0;
     }
 
     /**
      * Add IntersectionObserver to images.
      *
      * @function load
+     * @param {Object} options - User options for tweaking the behaviour
      * @return {void}
      */
     load() {
         // Get all of the images that are marked up to lazy load
-        const images = document.querySelectorAll('.js-lazyload');
+        const images = document.querySelectorAll(this.selectorClass);
         const config = {
             // If the image gets within 50px in the Y axis, start the download.
-            rootMargin: '50px 0px',
-            threshold: 0.01,
+            root: this.rootElement,
+            rootMargin: this.rootMargin,
+            threshold: this.treshold
         };
         this.imageCount = images.length;
 
@@ -48,7 +55,7 @@ class Lazyloadify {
             }, config);
 
             for (const image of images) {
-                if (image.classList.contains('js-lazyloaded')) {
+                if (image.classList.contains(loadedClass)) {
                     continue;
                 }
 
@@ -128,8 +135,8 @@ class Lazyloadify {
      */
     applyImage(img, src) {
         // Prevent this from being lazy loaded a second time.
-        img.classList.remove('js-lazyload');
-        img.classList.add('js-lazyloaded');
+        img.classList.remove(this.selectorClass);
+        img.classList.add(this.loadedClass);
 
         if (img.tagName.toLowerCase() === 'img') {
             img.src = src;
@@ -139,4 +146,4 @@ class Lazyloadify {
     }
 }
 
-export default new Lazyloadify();
+export default Lazyloadify;
