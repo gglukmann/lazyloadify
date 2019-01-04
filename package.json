@@ -7,10 +7,6 @@
     "Ott-Kaarel Martens <ottmartens@gmail.com>"
   ],
   "main": "index.js",
-  "files": [
-    "index.js",
-    "index.min.js"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gglukmann/lazyloadify.git"
