@@ -9,9 +9,7 @@ A tool for lazy-loading images that reach a parent container, such as the viewpo
 ```code
 import Lazyloadify from 'lazyloadify';
 
-const imageLoader = new Lazyloadify(options);
-
-imageLoader.load();
+new Lazyloadify(options).load();
 ```
 
 ## Options
